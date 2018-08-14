@@ -20,9 +20,18 @@ h1 {
 p {
     padding-top: 1em;
     padding-bottom: 1em;
+    font-weight: 300;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
     color: white;
 }
 
@@ -40,6 +49,16 @@ a {
     padding-right: 1.5em;
 }
 
+.section-title {
+    margin-top: 1rem;
+}
+
+.display-bg {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 
 /*******************************
 ********************************
@@ -48,10 +67,6 @@ a {
 *******************************/
 header {
     background-color: #222222;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
 }
 
 
@@ -63,8 +78,33 @@ header {
 *******************************/
 
 .control {
-    margin: 0 auto;
-    height: 5.5em;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.control-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .logo {
@@ -76,12 +116,11 @@ header {
 }
 
 #navToggle {
-    position: absolute;
-    top: 35%;
-    right: 1em;
     cursor: pointer; 
     color: #fff;
-    font-size: 25px;
+    font-size: 32px;
+    padding: .25rem .75rem;
+    
   }
 
 .nav {
@@ -97,10 +136,16 @@ header {
 }
 
 .nav-list {
-    margin: 0;
-    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
     list-style: none;
-    overflow: hidden;
 }
 
 .nav-item {
@@ -135,12 +180,13 @@ header {
     position: relative;
     text-align: center;
     display: flex;
-    height: 100vh;
+    height: 55em;
     align-items: center;
+    padding: 4rem 2rem;
 }
 
 .hero:after {
-    background: rgba(59, 59, 59, .55);
+    background: rgba(32, 32, 32, 0.3);
     content: "";
     width: 100%;
     height: auto;
@@ -152,8 +198,8 @@ header {
     bottom: 0;
 }
 
-#hero-image {
-    background: url('../img/-images/hero.JPG');
+.hero-image {
+    background: url('../img/-images/auto-automobile-automotive-305070.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,10 +214,18 @@ header {
 }
 
 .hero-desc {
-    margin-bottom: 7em;
+    margin-bottom: 4em;
+    font-size: 1.75rem;
+    font-weight: 300;
 }
 
-
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+}
 
 
 /*******************************
@@ -180,14 +234,9 @@ header {
 ********************************
 *******************************/
 
-.h1-margin {
-    margin-top: 0;
-    padding-top: 1em;
-}
-
 #why-us {
     background-color: #222222;
-    padding-bottom: 2em;
+    padding: 2rem 2rem;
 }
 
 
@@ -198,13 +247,14 @@ header {
 ********************************
 *******************************/
 
+
 #services {
+    padding: 2rem 2rem;
     z-index: 1;
-    position: relative;
 }
 
 #services:after {
-    background: rgba(59, 59, 59, .55);
+    background: rgba(32, 32, 32, 0.1);
     content: "";
     width: 100%;
     height: auto;
@@ -216,12 +266,43 @@ header {
     bottom: 0;
 }
 
-.backgroundImage {
-    padding-bottom: 2em;
-    background: url('../img/-images/hero.JPG');
+.services-image {
+    background: url('../img/-images/audi-audi-car-automobile-168938.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(108, 117, 125);
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-inner {
+    padding: 1.5rem;
+}
+
+.card-title{
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -233,8 +314,7 @@ header {
 *******************************/
 
 #about {
-    padding-bottom: 2em;
-    
+    padding: 2rem 2rem;
 }
 
 
@@ -251,10 +331,6 @@ header {
     margin-top: 0;
 }
 
-.h2-margin {
-    margin-top: 0;
-    padding-top: 1em;
-}
 
 
 
@@ -265,37 +341,147 @@ header {
 *******************************/
 
 #mobile {
-    z-index: 1;
-    position: relative;
-}
-
-#mobile:after {
-    background: rgba(59, 59, 59, .55);
-    content: "";
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    padding: 2rem 2rem;
 }
 
 
+/*******************************
+********************************
+            Elements
+********************************
+*******************************/
 
+.btn-primary {
+    color: #fff; 
+    background-color: #ED1C24;
+    border-color: #ED1C24; 
+}
 
+.btn-secondary {
+    color: #fff; 
+    background-color: #6c757d;
+    border-color: #6c757d; 
+}
 
-
-/* Elements */
-.btn {
+/* .btn {
     background-color: #ED1C24;
     border: 0;
     padding: 15px 50px 15px 50px;
     border-radius: 15px;
+} */
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .575rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .icon {
     margin: 1em auto;
-    width: 25%;
+    width: 7rem;
+}
+
+
+/*******************************
+********************************
+        Media Queries
+********************************
+*******************************/
+
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+
+    .col {
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+     max-width: 720px;
+    }
+
+    .nav-list {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .card{
+    margin-bottom: 0;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-gap: 15px;
+        align-content: space-evenly;
+      }
+      .grid-container > div {
+        text-align: center;
+        padding: 20px 0;
+        justify-content: center; 
+      }
+      .card1 {
+        grid-area: 1 / 1 / 1 / 5;
+      }
+      
+      .card2 {
+        grid-area: 2 / 1 / 2 / 5; 
+      }
+      
+      .card3 {
+        grid-area: 1 / 7 / 3 / 5;
+      }
+      
+      .card4 {
+        grid-area: 3 / 1 / 3 / 4; 
+      }
+      
+      .card5 {
+        grid-area: 3 / 4 / 3 / 7;
+      }
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
 }
