@@ -140,31 +140,17 @@ img {
 *******************************/
 header {
     background-color: #222222;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
-
-
 
 /*******************************
 ********************************
           Navigation
 ********************************
 *******************************/
-
-.control {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: .5rem 1rem;
-}
 
 .control-flex {
     display: -webkit-box;
@@ -191,8 +177,7 @@ header {
     color: #fff;
     font-size: 32px;
     padding: .25rem .75rem;
-    
-  }
+}
 
 .nav {
     z-index: 1000;
@@ -203,7 +188,6 @@ header {
     margin-top: 0;
     padding-top: 25px;
     text-align: center;
-    position: fixed;
 }
 
 .nav-list {
@@ -251,9 +235,9 @@ header {
     position: relative;
     text-align: center;
     display: flex;
-    height: 55em;
     align-items: center;
     padding: 4rem 2rem;
+    height: 30rem;
 }
 
 .hero:after {
@@ -521,13 +505,6 @@ header {
         margin-left: -15px;
     }
 
-    .nav-list {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-    }
-
     .card-profile {
         width: 50%;
         margin: 1.25rem 1.25rem;
@@ -547,6 +524,34 @@ header {
 }
 
 @media (min-width: 992px) {
+
+    .nav {
+        display: flex;
+        flex: 1;
+        z-index: 0;
+        padding: 0;
+        margin-top: 0;
+        text-align: center;
+        justify-content: flex-end;
+    }
+
+    .nav-list {
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    #navToggle {
+        display: none;
+    }
+
     .container {
         max-width: 960px;
     }
@@ -589,7 +594,7 @@ header {
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1000px){
     .container {
         max-width: 1140px;
     }
